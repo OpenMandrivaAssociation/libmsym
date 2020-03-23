@@ -1,0 +1,20 @@
+diff -up libmsym-0.2.3/CMakeLists.txt.omv~ libmsym-0.2.3/CMakeLists.txt
+--- libmsym-0.2.3/CMakeLists.txt.omv~	2020-03-23 15:13:26.436312042 +0100
++++ libmsym-0.2.3/CMakeLists.txt	2020-03-23 15:14:27.314001053 +0100
+@@ -13,7 +13,6 @@ set(LIBMSYM_MINOR_VERSION 2)
+ set(LIBMSYM_PATCH_VERSION 2)
+ set(LIBMSYM_VERSION ${LIBMSYM_MAJOR_VERSION}.${LIBMSYM_MINOR_VERSION}.${LIBMSYM_PATCH_VERSION})
+ 
+-set(INSTALL_LIB_DIR lib CACHE PATH "Installation directory for msym library")
+ set(INSTALL_INCLUDE_DIR include CACHE PATH "Installation directory for header files")
+ 
+ if(WIN32 AND NOT CYGWIN)
+@@ -96,7 +95,7 @@ install(FILES "${PROJECT_BINARY_DIR}/msy
+ install(TARGETS msym
+         EXPORT libmsymTargets
+         RUNTIME DESTINATION "${INSTALL_BIN_DIR}"
+-        ARCHIVE DESTINATION "${INSTALL_LIB_DIR}"
++	ARCHIVE DESTINATION "${LIB_INSTALL_DIR}"
+         PUBLIC_HEADER DESTINATION "${INSTALL_INCLUDE_DIR}/libmsym"
+         LIBRARY DESTINATION "${INSTALL_LIB_DIR}" )
+ 
