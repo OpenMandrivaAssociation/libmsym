@@ -4,7 +4,7 @@
 
 Name:		libmsym
 Version:	0.2.3
-Release:	1
+Release:	2
 License:	MIT
 Source0:	https://github.com/mcodev31/libmsym/archive/v%{version}.tar.gz
 Patch0:		libmsym-0.2.3-lib64.patch
@@ -26,6 +26,8 @@ Molecular Point Group Symmetry library
 %package -n %{devname}
 Summary:	Development files for the Molecular Point Group Symmetry library
 Group:		Development/C++ and C
+Requires:	%{libname} = %{EVRD}
+Provides:	msym-devel = %{EVRD}
 
 %description -n %{devname}
 Development files for the Molecular Point Group Symmetry library
