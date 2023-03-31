@@ -4,7 +4,7 @@
 
 Name:		libmsym
 Version:	0.2.3
-Release:	2
+Release:	3
 License:	MIT
 Source0:	https://github.com/mcodev31/libmsym/archive/v%{version}.tar.gz
 Patch0:		libmsym-0.2.3-lib64.patch
